@@ -147,7 +147,7 @@ a { color: white; text-decoration: none;}
 
     left: 50%;
 
-    font-size: 2vw;
+    font-size: calc(1vw + .25em);
 }
 
 #about-me {
@@ -187,6 +187,7 @@ a { color: white; text-decoration: none;}
 
 .project-placeholder {
     padding: 15px;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
 
@@ -250,11 +251,15 @@ a { color: white; text-decoration: none;}
 @media only screen and (max-width: 639px) { /* PHONES */
     /* #name-logo, #img-logo {display: none;} */
 
-    .nav-bar-main { padding: 0; }
+    .nav-bar-main { padding: 0 10px 0 10px; }
 
     .nav-bar-left {
         display: none; 
         flex: 0; 
+    }
+
+    .nav-bar-right { 
+        min-width: 85px; /* fix here */
     }
 
     .footer-main { padding: 5px; }
@@ -270,7 +275,7 @@ a { color: white; text-decoration: none;}
     }
 
     .footer-bar-right {
-        font-size: .85em;
+        font-size: .8em;
     }
 
     .nav-bar-right {
@@ -279,14 +284,6 @@ a { color: white; text-decoration: none;}
 
     .main-header-text {
         font-size: calc(5vw + 1em);
-    }
-
-    .main-header-subtext {
-        font-size: calc(5vw + .25em);
-    }
-
-    #about-me-nav, #projects-nav, #contact-nav { 
-        min-width: 100px; 
     }
 
     .about-me-upper {
