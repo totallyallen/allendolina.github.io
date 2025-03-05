@@ -8,22 +8,87 @@
   <title>Allen Dolina</title>
 </head>
 <body>
-  <header class="nav-bar-main flex-container">
-    <div class="nav-bar-shadow"></div>
-    <div class="nav-bar-left flex-container flex-left">
-      <img class="square"src="./assets/logo.png">
-    </div>
-    <div class="nav-bar-right flex-container flex-right helvetica">
-      <div class="flex-container square" id="about-me">
-        About Me
+  <div class="sub-body">
+    <div class="nav-bar-main flex-container">
+      <div class="nav-bar-shadow"></div>
+      <div class="nav-bar-left flex-container flex-left">
+        <img class="square" id="img-logo" src="./assets/logo.png">
+        <div class="helvetica" id="name-logo" style="font-size: 2em"> a.d. </div>
       </div>
-      <div class="flex-container square" id="projects">
-        Projects
-      </div>
-      <div class="flex-container square" id="contact">
-        Contact
+      <div class="nav-bar-right flex-container flex-right helvetica">
+        <a href="#about-me" class="flex-container square">About Me</a>
+        <a href="#misc-lower" class="flex-container square">Projects</a>
       </div>
     </div>
-  </header>
+
+    <div class="main-header helvetica">
+      <div class="main-header-text flex-container flex-column">
+        Allen Dolina
+        <div class="main-header-subtext flex-container" style="font-weight: 500;"> An aspiring web dev </div>
+      </div>
+    </div>
+
+    <div class="flex-container flex-column" id="about-me" style="align-items: flex-start;">
+      <div class="about-me-upper max-width flex-container">
+        <div class="upper-left max-width max-height flex-column flex-container">
+          
+          <div class="helvetica" style="font-size: calc(3vw + 1em);">About Me</div>
+          <br>
+          <div class="helvetica" style="font-size: calc(1vw + .5em); font-weight: bolder; height: 100%;">
+            Hi! My name is Allen and I aspire to be a front-end developer. I'm currently a student
+            at CUNY Queens College on track to obtain a degree in Computer Science. As I study, I also 
+            like to <i>fiddle</i>, which allows me to challenge myself and gain a better understanding
+            of how I can apply my creativity.
+            <br><br>
+  
+            I love Japanese Rock, and a bit of pop here and there––
+            see me at the nearest concert venue.
+          </div>
+        </div>
+  
+        <div class="upper-right flex-container">
+          <div class="headshot"></div>
+        </div>
+      </div>
+
+      <div class="flex-container flex-column max-width" id="misc-lower">
+        <div class="helvetica" style="font-size: calc(3vw + 1em)">Projects</div>
+        <a href="https://docs.google.com/document/d/1a6zSMK_5-BIGDR02sKAo1Ihf_n-WPmxXaOAJ4DIcH4k/edit?tab=t.0" class="helvetica" style="font-size: calc(1vw + .5em); color: white; margin: 10px 0 0 0;">[Resume]</a>
+
+        <div class="project-grid flex-container max-width">
+          <div class="project-placeholder helvetica" style="color: black;">
+            Project 1
+          </div>
+
+          <div class="project-placeholder helvetica" style="color: black;">
+            Project 2
+          </div>
+
+          <div class="project-placeholder helvetica" style="color: black;">
+            Project 3
+          </div>
+
+          <div class="project-placeholder helvetica" style="color: black;">
+            Project 4
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-main flex-container">
+      <div class="footer-bar-left flex-container flex-left">
+        <a href="mailto:allendolina@gmail.com">
+          <img class="square" src="./assets/email_logo.svg" aria-roledescription="button" style="max-width: 50px; max-height: 50px;"></img>
+        </a>
+
+        <a href="https://github.com/totallyallen" target="_blank">
+          <img class="square" src="./assets/git_logo.png" aria-roledescription="button" style="max-width: 50px; max-height: 50px;"></img>
+        </a>
+      </div>
+      <div class="footer-bar-right flex-container flex-right helvetica">
+        allen dolina &copy; 2025 All Rights Reserved.
+      </div>
+    </div>
+  </div>
 </body>
 </html>
