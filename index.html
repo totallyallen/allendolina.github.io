@@ -7,17 +7,18 @@
   <link rel="stylesheet" href="./style.css">
   <title>Allen Dolina</title>
 </head>
+
 <body>
   <div class="sub-body">
     <div class="nav-bar-main flex-container">
       <div class="nav-bar-shadow"></div>
-      <div class="nav-bar-left flex-container flex-left">
+      <div class="nav-bar-left flex-container flex-left" style="gap: 35px">
         <img class="square" id="img-logo" src="./assets/logo.png">
         <div class="helvetica" id="name-logo" style="font-size: 2em"> a.d. </div>
       </div>
       <div class="nav-bar-right flex-container flex-right helvetica" style="font-size: 1.25em">
-        <a href="#about-me" class="flex-container square">About Me</a>
-        <a href="#misc-lower" class="flex-container square">Projects</a>
+        <a href="#about-me" class="flex-container square" id="bar-hover">About Me</a>
+        <a href="#misc-lower" class="flex-container square" id="bar-hover">Projects</a>
 
         <a href="mailto:allendolina@gmail.com">
           <img class="square" src="./assets/email_logo_white.png" aria-roledescription="button" style="max-width: 50px; max-height: 50px;"></img>
@@ -37,21 +38,26 @@
     </div>
 
     <div class="flex-container flex-column" id="about-me" style="align-items: flex-start; justify-self: center;">
-      <div class="about-me-upper max-width flex-container">
+      <div class="about-me max-width flex-container">
         <div class="upper-left max-width max-height flex-column flex-container">
           
           <span class="helvetica" style="font-size: calc(3vw + 1em);">About Me</span>
           <br>
-          <div class="helvetica" style="font-size: calc(1vw + .5em); font-weight: bolder; height: 100%;">
-            Hi! My name is Allen and I aspire to be a front-end developer. Based in Queens, New York,
-            I'm currently a student
-            at CUNY Queens College on track to obtain a degree in Computer Science. As I study, I also 
-            like to <i>fiddle</i>, which allows me to challenge myself and gain a better understanding
+          <div class="helvetica" style="font-size: calc(1vw + .5em); font-weight: bold; height: 100%;">
+            Based in Queens, New York,
+            I'm currently a 3rd year Computer Science student at CUNY Queens College 
+            with keen interest in front-end development, and passion for technology. 
+            
+            After taking a class based on web development,
+            I've sparked a passion for front-end development.
+            As I study, I also like to <i>fiddle</i>, 
+            which allows me to challenge myself and gain a better understanding
             of how I can apply my creativity.
             <br><br>
   
-            I love Japanese Rock, and a bit of pop here and there––
-            see me at the nearest concert venue.
+            Outside of school, my interests include listening to Japanese indie rock,
+            playing the piano, and exploring the world. I love going to concerts too.
+            See me at the nearest venue!
           </div>
         </div>
   
@@ -60,49 +66,34 @@
         </div>
       </div>
 
-      <div class="flex-container flex-column max-width" id="misc-lower">
+      <section class="flex-container flex-column max-width" id="misc-lower">
         <span class="helvetica" style="font-size: calc(3vw + 1em)">Projects</span>
         <a href="https://docs.google.com/document/d/1a6zSMK_5-BIGDR02sKAo1Ihf_n-WPmxXaOAJ4DIcH4k/edit?tab=t.0" class="helvetica" style="font-size: calc(1vw + .5em); color: white; margin: 10px 0 10px 0;">[Resume]</a>
-        <span class="helvetica" style="font-size: calc(1vw + 1em); text-align: center;">Java • HTML • CSS • JS • C++ • Python</span>
 
-        <div class="project-grid flex-container max-width" style="text-align: center;">
-          <div class="project-placeholder helvetica" style="color: black;">
-            <a href="https://the355axolotl.github.io/golearntutoring_site/" target="_blank">
-              [GoLearn - Business Website]
-              <br><br>
-              Used vanilla HTML, CSS, and a bit of JS for a class group project.
-            </a>
-          </div>
-
-          <div class="project-placeholder helvetica" style="color: black;">
-            Project 2
-          </div>
-
-          <div class="project-placeholder helvetica" style="color: black;">
-            Project 3
-          </div>
-
-          <div class="project-placeholder helvetica" style="color: black;">
-            Project 4
-          </div>
-        </div>
+        <div class="flex-container max-width flex-column" id="project-grid" style="text-align: center;">
+          <!-- <a href="https://the355axolotl.github.io/golearntutoring_site/" target="_blank" class="project-placeholder helvetica" style="color: black; width: 700px; gap: 5px; overflow: hidden;">
+            <div class="max-height">
+                <h5>GoLearn - Business Website</h5>
+                <br><br>
+                Used vanilla HTML, CSS, and a bit of JS for a class group project.
+            </div>
+            <div class="max-height" id="proj-1"></div>
+          </a> -->
       </div>
-    </div>
-
-    <footer class="footer-main flex-container">
-      <div class="footer-bar-left flex-container flex-left">
-        <a href="mailto:allendolina@gmail.com">
-          <img class="square" src="./assets/email_logo.svg" aria-roledescription="button" style="max-width: 50px; max-height: 50px;"></img>
-        </a>
-
-        <a href="https://github.com/totallyallen" target="_blank">
-          <img class="square" src="./assets/git_logo.png" aria-roledescription="button" style="max-width: 50px; max-height: 50px;"></img>
-        </a>
-      </div>
-      <div class="footer-bar-right flex-container flex-right helvetica">
-        allen dolina &copy; 2025 All Rights Reserved.
-      </div>
-    </footer>
+    </section>
   </div>
+
+  <footer class="footer-main flex-container">
+    <div class="footer-bar-left flex-container flex-column helvetica" style="align-items: flex-start; gap: 10px">
+      Connect with me!
+      <a href="mailto:allendolina@gmail.com" target="_blank" id="email-link-img" style="font-size: .5em;">allendolina@gmail.com</a>
+      <a href="https://github.com/totallyallen" target="_blank" id="git-link-img" style="font-size: .5em;">github.com/totallyallen</a>
+    </div>
+    <div class="footer-bar-right flex-container flex-right helvetica">
+      allen dolina &copy; 2025
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

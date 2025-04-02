@@ -40,8 +40,6 @@ a { color: white; text-decoration: none;}
 .nav-bar-left, .footer-bar-left {
     height: 100%;
     flex: 1;
-
-    gap: 35px;
 }
 
 .nav-bar-right, .footer-bar-right {
@@ -57,7 +55,7 @@ a { color: white; text-decoration: none;}
     position: relative;
 }
 
-.nav-bar-right > *::before {
+#bar-hover::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -72,7 +70,7 @@ a { color: white; text-decoration: none;}
     background-color: #FFFFFF;
 }
 
-.nav-bar-right > *:hover::before {
+#bar-hover:hover::before {
     transform: scaleX(1);
 }
 
@@ -158,7 +156,7 @@ a { color: white; text-decoration: none;}
     box-sizing: border-box;
     
     background-color: rgb(0, 0, 0);
-    border-top: 15px solid #FFFFFF;
+    border-top: 8px solid white;
 }
 
 #misc-lower {
@@ -166,7 +164,7 @@ a { color: white; text-decoration: none;}
     padding: 25px;
     box-sizing: border-box;
 
-    border-top: 15px solid #FFFFFF;
+    border-top: 8px solid white;
 }
 
 .headshot {
@@ -178,28 +176,82 @@ a { color: white; text-decoration: none;}
     background-position: 0% 25%;
 }
 
-.project-grid {
+.footer-main {
+    background-color: rgb(0, 0, 0);
+
+    width: 100vw;
+    height: calc(1vw + 100px);
+
+    position: sticky;
+
+    padding: 0 20px 0 10px;
+    box-sizing: border-box;
+
+    border-top: 5px solid;
+}
+
+.footer-bar-left > a {
+    text-decoration: underline dotted white 2px;
+}
+
+#email-link-img::before, #git-link-img::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 3px 2px;
+
+    background: url(./assets/email_logo_white.png) no-repeat;
+    background-size:100%;
+}
+
+#git-link-img::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 3px 2px;
+
+    background: url(./assets/git_logo_white.png) no-repeat;
+    background-size:100%;
+}
+
+/* PROJECTS SECTION */
+
+#project-grid {
     margin: 25px 0 0 0;
     height: 75%;
 
     gap: 10px;
 }
 
+#project-grid > .project-placeholder {
+    height: 300px;
+}
+
 .project-placeholder {
-    padding: 15px;
-    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    /* padding: 5px;
+    box-sizing: border-box; */
     width: 100%;
     height: 100%;
 
     background-color: white;
-
-    transition: 0.25s;
 }
 
-.project-placeholder:hover {
-    transform: scale(.95, .95);
+.project-placeholder > *:not(h5) {
+    font-size: 1em;
 }
-
 
 /* CUSTOMIZABLE ATTRIBUTES */
 
@@ -229,26 +281,21 @@ a { color: white; text-decoration: none;}
     object-fit: cover;
 }
 
-.footer-main {
-    background-color: white;
-
-    width: 100vw;
-    height: calc(1vw + 65px);
-
-    position: sticky;
-
-    padding: 0 20px 0 10px;
-    box-sizing: border-box;
-}
-
-.footer-main > * {
-    color: black;
-}
-
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 639px) { /* PHONES */
+@media screen and (max-width: 685px) {
+    .about-me {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .upper-left {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 639px) { /* PHONES */
     /* #name-logo, #img-logo {display: none;} */
 
     .nav-bar-main { padding: 0 10px 0 10px; }
@@ -264,19 +311,7 @@ a { color: white; text-decoration: none;}
 
     .footer-main { padding: 5px; }
 
-    .footer-bar-left {
-        flex: .25;
-        gap: 15px;
-    }
-
-    .footer-bar-left img {
-        max-width: 25px;
-        max-height: 25px;
-    }
-
-    .footer-bar-right {
-        font-size: .8em;
-    }
+    .footer-bar-left { flex: 1.5; }
 
     .nav-bar-right {
         justify-content: space-around;
@@ -284,10 +319,5 @@ a { color: white; text-decoration: none;}
 
     .main-header-text {
         font-size: calc(5vw + 1em);
-    }
-
-    .about-me-upper {
-        flex-direction: column;
-        gap: 20px;
     }
 }
